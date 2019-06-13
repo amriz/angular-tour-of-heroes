@@ -14,5 +14,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Database Alumni Gontor IKPM Eropa';
+  title = 'Database Alumni IKPM Eropa';
 }
