@@ -1,0 +1,1 @@
+set path=C:\Users\amru\Documents\00_Meinlab\node-v10.15.3-win-x64;%path%

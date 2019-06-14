@@ -1,43 +1,43 @@
-<h2>My Heroes</h2>
+<h2>List Alumni (klik nama untuk profil lebih detail)</h2>
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
     <span class="hero-element">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </span>
-    <button class="delete-button" (click)="deleteHero(hero, $event)">Delete</button>
+    <!----button class="delete-button" (click)="deleteHero(hero, $event)">Delete</button-->
   </li>
 </ul>
 
 <div class="error" *ngIf="error">{{error}}</div>
-<button (click)="addHero()">Add New Hero</button>
+<button (click)="addHero()">Tambah anggota baru</button>
 <div *ngIf="addingHero">
   <my-hero-detail (close)="close($event)"></my-hero-detail>
 </div>
 
 <div *ngIf="selectedHero">
   <h2>
-    {{selectedHero.name | uppercase}} is my hero
+  Biodata {{selectedHero.name}} 
   </h2>
-  <button (click)="gotoDetail()">View Details</button>
+  <button (click)="gotoDetail()">Lihat Profil Detail</button>
 </div>
 
 <div>
   <style>
     .hidden { visibility: hidden}
   </style>
-  <h4>ngFor Features</h4>
-  <button (click)="showNgFor=!showNgFor">{{showNgFor ? 'Hide' : 'Show'}} ngFor Features</button>
+  <h4>Fitur Tabel Data Anggota</h4>
+  <button (click)="showNgFor=!showNgFor">{{showNgFor ? 'Tutup' : 'Tampilkan'}}  Fitur</button>
   <table [class.hidden]="!showNgFor">
     <tbody>
       <tr *ngFor="let hero of heroes; let ix = index; let c = count; let e = even; let o = odd; let f = first; let l = last">
         <td>{{hero.name}}</td>
-        <td>{{ix}}</td>
-        <td>{{c}}</td>
-        <td>{{e}}</td>
-        <td>{{o}}</td>
-        <td>{{f}}</td>
-        <td>{{l}}</td>
+        <td style="width:2em">{{ix}}</td>
+        <td style="width:2em">{{c}}</td>
+        <td style="width:4em">{{e}}</td>
+        <td style="width:4em">{{o}}</td>
+        <td style="width:4em">{{f}}</td>
+        <td style="width:4em">{{l}}</td>
       </tr>
     </tbody>
   </table>
