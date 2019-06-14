@@ -1,18 +1,22 @@
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
   <div>
-    <label>id: </label>{{hero.id}}</div>
+    <label>ID: </label>{{hero.id}}</div>
   <div>
-    <label>nama: </label>
+    <label>NAMA: </label>
     <input [(ngModel)]="hero.name" placeholder="name" style="width: 7em" />
   </div>
   <div>
-    <label>alamat: </label>
+    <label>ALAMAT: </label>
     <input [(ngModel)]="hero.address" placeholder="address" />
   </div>
   <div>
-    <label>asal daerah: </label>
+    <label>ASAL DAERAH: </label>
     <input [(ngModel)]="hero.region" placeholder="region" />
+  </div>
+  <div>
+    <label>TAHUN ANGKATAN: </label>
+    <input [(ngModel)]="hero.year" placeholder="year" />
   </div>
   <button (click)="goBack()">Kembali</button>
   <button (click)="save()">Simpan</button>
